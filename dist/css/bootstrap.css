@@ -4168,7 +4168,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 180px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -4576,7 +4576,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #777;
 }
 .navbar-default .navbar-link:hover {
-  color: #333;
+  color: #999;
 }
 .navbar-default .btn-link {
   color: #777;
@@ -4611,7 +4611,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #fff;
+  color: #921;
   background-color: transparent;
 }
 .navbar-inverse .navbar-nav > .active > a,

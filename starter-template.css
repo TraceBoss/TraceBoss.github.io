@@ -1,7 +1,11 @@
 body {
-  padding-top: 50px;
+  padding-top: 12%;
 }
 .starter-template {
-  padding: 40px 15px;
-  text-align: center;
+	align-content: center;
+}
+table.center {
+	width:70%; 
+	margin-left:15%; 
+	margin-right:15%;
 }
