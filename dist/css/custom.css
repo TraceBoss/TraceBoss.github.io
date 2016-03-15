@@ -1,59 +1,96 @@
 nav {
-	background-color: #414042;
+	
 	height:20%;
 	align-items: center;
 }
+body{
+	color: rgb(65,64,66);
+	font-weight: 300;
+}
 .navbar {
+	padding-left: 150px;
+	padding-right: 150px;
 	align-content: center;
 	font-size: 200%;
+	background-color: rgb(65,64,66);
 }
 .navbar-brand{
 	font-size: 100%;
 }
+b.bold{
+	font-weight: 600;
+}
+b.light{
+	font-weight: 200;
+}
 table {
 	width: 100%;
 }
-td{
-	text-align: center; 	
+table.info {
+	font-size: 165%;
+	border-bottom: 1px rgb(147,149,152);
+}
+table.info td{
+	text-align: left;
+	padding-left: 10px;
+	font-weight: 300;
+	border-right: 1px solid rgb(147,149,152);
+	
+}
+table.info tr td:last-child,
+table.info tr th:last-child {
+  border-right: 0;
+}
+table.info tr:nth-child(even){
+	background-color: rgb(209,211,212);
+}
+table.info th{
+	text-align: left;
+	background-color: rgb(157,159,162);
+	color: #FFFFFF;
+	height: 90px;
+	padding-left: 10px;
+	font-weight: 200;
+	border-right: 1px solid rgb(147,149,152);
+
 }
 td.custom{
 	padding-top: 3.5%;
 	padding-bottom: 5%;
+	text-align: center;	
 }
 .title{
 	color: #FFFFFF;
 	font-size: 150%;
 }
 td.section{
-	font-size: 210%;
-	font-weight: bold;
-	text-decoration: underline;
+	font-size: 200%;
+	font-weight: 600;
+	text-decoration: none;
 	color: #FF5F57;
+
 }
 a:link, a:visited, a {
 	color: #FFFFFF;
 }
+a.custom{
+	font-size: 210%;
+	font-weight: 600;
+	border-bottom: 2px solid #FF5F57;
+	padding-bottom: 20px;
+	text-decoration: none;
+	color: #FF5F57;	
+}
 a:hover{
 	font-size: 210%;
-	font-weight: bold;
-	text-decoration: underline;
+	font-weight: 600;
+	border-bottom: 2px solid #FF5F57;
+	padding-bottom: 20px;
+	text-decoration: none;
 	color: #FF5F57;
 }
 .container {
 
   /* Set width to your desired site width */
   width: 1170px !important;
-}
-tr:nth-child(even){
-	background-color: rgb(209,211,212);
-}
-th{
-	text-align: left;
-	background-color: rgb(157,159,162);
-	color: #FFFFFF;
-	font-size: 160%;
-	height: 90px;
-	font-weight: normal;
-	padding-left: 15px;
-
 }
