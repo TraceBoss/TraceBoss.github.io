@@ -12,19 +12,19 @@
     <title>TraceBoss</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
 
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="./assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="starter-template.css" rel="stylesheet">
+    <link href="./starter-template.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./assets/js/ie-emulation-modes-warning.js"></script>
-    <link href="./dist/css/custom.css" rel="stylesheet">
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+    <link href="../dist/css/custom.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700' rel='stylesheet' type='text/css'>
 	<style>
 		body{
@@ -39,87 +39,64 @@
   </head>
 
   <body>
-      <nav >
+      <nav>
       	<div class="container2">	
           <div id="navbar">
 	      <div class="container4">	
 	        <table class=custom>
 		         <tr>
 		             <td class="custom title"><b class="bold">T R A C E </b><b class="light">B O S S</b></td>
-		             <td class="custom"><a class="custom">DashBoard</a></td>
+		             <td class="custom"><a href="../index.html"lass="custom">DashBoard</a></td>
 		             <td class=custom><a href="#">Create</a></td>
 		             <td class=custom><a href="#">Assign</a></td>
 		             <td class=custom><a href="#">Dispatch</a></td>
 		             <td class=custom><a href="#">POD</a></td>
 		             <td class=custom><a href="#">Invoice</a></td>
-		             <td class=custom><a href="./pages/setting.html">Setting</a></td>
+		             <td class=custom><a class="custom">Setting</a></td>
 	            </tr>
 	        </table>
 	        </div>
           </div>
         </div>
       </nav>
-    </div>        
-    <div class="container3">
-    	<table class="center buttons">
-		    <tr>
-		    	<td class=right><input type="button" class="button1"   value="  P I C K U P   " /></td>
-				<td class=left><input  type="button" class="button2" onclick="location.href='./pages/indexDelivery.html';" value=" D E L I V E R Y " /></td>
+    </div>
+    <div class="containerSetting SettingTitle">
+    	S E T T I N G
+    </div>
+    <div class="containerSetting buttonSpace">
+    	<table class="But">
+    		<tr>
+    			<td><input  type="button" class="button3" onclick="location.href='./settingCustomer.html';" value="Customer" /> </td>
+    			<td><input  type="button" class="button3" onclick="location.href='./pages/indexDelivery.html';" value="Shipper/Cosignee" /> </td>
+    			<td> <input  type="button" class="button3" onclick="location.href='./pages/indexDelivery.html';" value="Custom Broker" /></td>
     		</tr>
     	</table>
     </div>
-    <div class="container5">
-      <table class=" center info" >
-        <thead>
-        	<tr>
-	          <th>Load#</th>
-	          <th>Pickup Date</th>
-	          <th>Customer</th>
-	          <th>Pickup</th>
-	          <th>Truck</th>
-	          <th>Trailer</th>
-	          <th>Driver</th>
-	          <th>Status</th>
-	          <th>Status</th>
-	          <th>Action</th>
-	        </tr>
-	    </thead>
-	    <tbody>
-	    	<tr>
-	          <td>TH123</td>
-	          <td>Jul 04, 2016</td>
-	          <td>Sobeys</td>
-	          <td>Missauga</td>
-	          <td>408</td>
-	          <td>LGR5038</td>
-	          <td>Ravi</td>
-	          <td>Synced</td>
-	          <td>Open</td>
-	          <td>Action</td>
-	        </tr>
-
-	    	<tr>
-	          <td>TH123</td>
-	          <td>Jul 04, 2016</td>
-	          <td>Sobeys</td>
-	          <td>Missauga</td>
-	          <td>408</td>
-	          <td>LGR5038</td>
-	          <td>Ravi</td>
-	          <td>Synced</td>
-	          <td>Open</td>
-	          <td>Action</td>
-	        </tr>
-	    </tbody>
-      </table>
+    <div class="containerSetting buttonSpace">
+    	<table class="But">
+    		<tr>
+    			<td><input  type="button" class="button3" onclick="location.href='./pages/indexDelivery.html';" value="Unit" /> </td>
+    			<td><input  type="button" class="button3" onclick="location.href='./pages/indexDelivery.html';" value="Driver" /> </td>
+    			<td> <input  type="button" class="button3" onclick="location.href='./pages/indexDelivery.html';" value="" /></td>
+    		</tr>
+    	</table>
+    </div>
+    <div class="containerSetting buttonSpace">
+    	<table class="But">
+    		<tr>
+    			<td><input  type="button" class="button3" onclick="location.href='./pages/indexDelivery.html';" value="Your Company " /> </td>
+    			<td><input  type="button" class="button3" onclick="location.href='./pages/indexDelivery.html';" value="Password" /> </td>
+    			<td> <input  type="button" class="button3" onclick="location.href='./pages/indexDelivery.html';" value="" /></td>
+    		</tr>
+    	</table>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./dist/js/bootstrap.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
