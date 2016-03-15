@@ -5,7 +5,5 @@ body {
 	align-content: center;
 }
 table.center {
-	width:70%; 
-	margin-left:15%; 
-	margin-right:15%;
+	width:100%; 
 }

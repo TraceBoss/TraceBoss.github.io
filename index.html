@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name='viewport' content='width=1190'>
+    
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
@@ -24,6 +24,12 @@
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./assets/js/ie-emulation-modes-warning.js"></script>
     <link href="./dist/css/custom.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900' rel='stylesheet' type='text/css'>
+	<style>
+		body{
+			font-family: Source Sans Pro;
+		}
+	</style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -32,11 +38,11 @@
   </head>
 
   <body>
-    <div class =container-non-responsive >
+    <div class =container >
       <nav class="navbar navbar-inverse navbar-fixed-top">
           <div id="navbar" >
             <table class=custom>
-	           	<th>
+	           	<tr>
 	             <td class="custom title"><b class="use">Trace</b>Boss</td>
 	             <td class="custom section">DashBoard</td>
 	             <td class=custom><a href="#">Create</a></td>
@@ -46,7 +52,7 @@
 	             <td class=custom><a href="#">Invoice</a></td>
 	             <td class=custom><a href="#">TraceBoss</a></td>
 
-	            </th>
+	            </tr>
             </table>
           </div>
         </div>
@@ -54,18 +60,34 @@
     </div>
     <div class="container">
       <table class="table-bordered center" >
-        <tr>
-          <td>Load#</td>
-          <td>Pickup Date</td>
-          <td>Customer</td>
-          <td>Pickup</td>
-          <td>Truck</td>
-          <td>Trailer</td>
-          <td>Driver</td>
-          <td>Status</td>
-          <td>Sync</td>
-          <td>Action</td>
-        </tr>
+        <thead>
+        	<tr>
+	          <th>Load#</th>
+	          <th>Pickup Date</th>
+	          <th>Customer</th>
+	          <th>Pickup</th>
+	          <th>Truck</th>
+	          <th>Trailer</th>
+	          <th>Driver</th>
+	          <th>Status</th>
+	          <th>Status</th>
+	          <th>Action</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	    	<tr>
+	          <td>TH123</td>
+	          <td>Jul 04, 2016</td>
+	          <td>Sobeys</td>
+	          <td>Missauga</td>
+	          <td>408</td>
+	          <td>LGR5038</td>
+	          <td>Ravi</td>
+	          <td>Synced</td>
+	          <td>Open</td>
+	          <td>Action</td>
+	        </tr>
+	    </tbody>
       </table>
     </div>
     <!-- Bootstrap core JavaScript

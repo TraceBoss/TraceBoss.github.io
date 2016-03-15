@@ -12,7 +12,6 @@ nav {
 }
 table {
 	width: 100%;
-
 }
 td{
 	text-align: center; 	
@@ -24,9 +23,6 @@ td.custom{
 .title{
 	color: #FFFFFF;
 	font-size: 150%;
-}
-.use{
-	font-weight: 1100px;
 }
 td.section{
 	font-size: 210%;
@@ -43,13 +39,21 @@ a:hover{
 	text-decoration: underline;
 	color: #FF5F57;
 }
-.container-non-responsive {
-  /* Margin/padding copied from Bootstrap */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+.container {
 
   /* Set width to your desired site width */
-  width: 1170px;
+  width: 1170px !important;
+}
+tr:nth-child(even){
+	background-color: rgb(209,211,212);
+}
+th{
+	text-align: left;
+	background-color: rgb(157,159,162);
+	color: #FFFFFF;
+	font-size: 160%;
+	height: 90px;
+	font-weight: normal;
+	padding-left: 15px;
+
 }
