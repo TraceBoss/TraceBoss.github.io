@@ -1,3 +1,26 @@
+.container2{
+  width: 100%;
+  height: 210px;
+  background-color: rgb(65,64,66);
+}
+.container3{
+	padding-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+  	width: 80%;
+}
+.container5{
+	padding-top: 60px;
+	margin-left: auto;
+	margin-right: auto;
+  	width: 80%;
+}
+.container4{
+
+	margin-left: auto;
+	margin-right: auto;
+  	width: 90%;
+}
 nav {
 	
 	height:20%;
@@ -54,10 +77,22 @@ table.info th{
 	border-right: 1px solid rgb(147,149,152);
 
 }
+table.buttons td.left{
+	text-align: left;
+	padding-left: 20px;
+}
+table.buttons td.right{
+	text-align: right;
+	padding-right: 20px;
+}
+table.custom{
+	height: 200px;
+}
 td.custom{
 	padding-top: 3.5%;
 	padding-bottom: 5%;
-	text-align: center;	
+	text-align: center;
+	font-size: 200%;	
 }
 .title{
 	color: #FFFFFF;
@@ -93,4 +128,23 @@ a:hover{
 
   /* Set width to your desired site width */
   width: 1170px !important;
+}
+
+button.button1 {
+	background-color: rgb(255,95,87);
+	border: none;
+    color: white;
+    padding: 17.5px 90px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 8px;
+}
+button.button2 {
+	background-color: white;
+	border: 1px solid gray;
+    color: black;
+    padding: 17.5px 90px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 8px;
 }

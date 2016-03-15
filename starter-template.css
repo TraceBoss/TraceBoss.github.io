@@ -1,9 +1,8 @@
-body {
-	padding-top: 210px;
-}
+
 .starter-template {
 	align-content: center;
 }
 table.center {
 	width:100%; 
+	align-self: center;
 }
