@@ -1,40 +1,78 @@
+.navbar {
+    position: fixed !important;
+    top: 0px;
+    width: 100%;
+}
 .container2{
-  width: 100%;
-  height: 195px;
-  background-color: rgb(65,64,66);
+	width: 100%;
+	height: 195px;
+	min-width:1500px;
+	background-color: rgb(65,64,66);
 }
 .container3{
+	min-width: 1500px;
 	padding-top: 100px;
 	margin-left: auto;
 	margin-right: auto;
   	width: 80%;
 }
 .container5{
+	min-width: 1500px;
 	padding-top: 60px;
 	margin-left: auto;
 	margin-right: auto;
   	width: 85%;
 }
 .container4{
-
+	min-width: 1500px;
 	margin-left: auto;
 	margin-right: auto;
   	width: 90%;
 }
 .containerSetting{
+	min-width: 1500px;
 	margin-left: auto;
 	margin-right: auto;
   	width: 85%;
+}
+.containerForm{
+	min-width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+  	border:3px solid rgb(157,159,162);
+  	width: 87%;
+  	background-color: rgb(209,211,212);
+ 	
+  	border-radius: 18px;
+}
+.containerFormInner{
+	padding-top: 18px;
+	padding-bottom: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 .buttonSpace{
 	padding-bottom: 20px;
 }
 .SettingTitle {
+	min-width: 1500px;
 	font-size: 52.5px;
 	color: rgb(255,95,87);
 	font-weight: 300;
 	padding-top: 100px;
 }
+.color{
+	font-size: 52.5px;
+	color: rgb(65,64,66);
+	font-weight: 300;
+}
+.color strong{
+	font-size: 52.5px;
+	color: rgb(255,95,87);
+	font-weight: 300;
+	font-style: none;
+}
+
 nav {
 	
 	height:20%;
@@ -102,12 +140,50 @@ table.buttons td.right{
 	padding-right: 20px;
 }
 table.custom{
+	min-width:1500px;
 	height: 200px;
 }
 td.custom{
 	text-align: center;
 	font-size: 35px;	
 }
+.settingSpace{
+	padding-top: 50px;
+} 
+.settingTableSpace{
+	border:3px solid rgb(157,159,162);
+	background-color: rgb(209,211,212);
+	border-radius:18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+table.settingTable {
+	color: rgb(65,64,66);
+}
+table.settingTable tr{
+	background-color: rgb(209,211,212);
+}
+table.settingTable tr:nth-child(even){
+	background-color: white;
+
+}
+table.settingTable td, th{
+	height: 60px;
+	color: rgb(65,64,66);
+	font-size: 165%;
+	font-weight: 300;
+	padding-left: 10px;
+	border-left: 1px solid rgb(157,159,162);
+	border-bottom: 1px solid rgb(157,159,162);
+}
+tr.settingTableLast td{
+	border: none;
+	background-color: rgb(209,211,212);
+	color: rgb(209,211,212);
+}
+
+
 .title{
 	color: #FFFFFF;
 	font-size: 150%;
@@ -153,7 +229,7 @@ input.button1 {
     font-size: 40px;
     border-radius: 8px;
 }
-input.button2 {
+input.button2 {/
 	background-color: white;
 	border: 1px solid gray;
     color: black;
@@ -173,6 +249,86 @@ input.button3 {
     width: 500px;
     height: 100px;
 }
+input.button4 {
+	background-color: rgb(108,189,125);
+	border: none;
+    color: white;
+    padding: 1px 20px;
+    text-align: left;
+    font-size: 35px;
+    border-radius: 12px;
+    width: 500px;
+    height: 100px;
+}
 table.But tr{
 	padding-bottom: 50px;
 }
+td.textField{
+	padding-left: 10px;
+	color: rgb(65,64,66);
+	font-weight: 600;
+	font-size: 15px;
+}
+td.text1{
+	width:30%;	
+}
+td.text2{
+	width:70%;
+}
+td.text3{
+	width: 5%;
+}
+td.text4{
+	padding-left: 1.5%;
+	text-align: left;
+}
+td.text5{
+	padding-right: 1.5%;
+	text-align: right;
+}
+tr.space{
+	height: 20px;
+}
+input.text1{
+	height: 90px;
+	width:100%;
+	border:1px solid rgb(65,64,66);
+	border-radius: 15px;
+	font-size: 40px;
+	padding-left: 10px;
+}
+input.button5{
+	width:100%;
+    height: 100%;
+	background-color: rgb(108,189,125);
+	border: none;
+    color: white;
+    padding: 1px 20px;
+    text-align: Center;
+    font-size: 35px;
+    border-radius: 12px;
+}
+input.button6{
+	width:350px;
+    height: 60px;
+	background-color: rgb(108,189,125);
+	border: none;
+    color: white;
+    padding: 1px 20px;
+    text-align: Center;
+    font-size: 35px;
+    border-radius: 12px;
+ }
+ input.button7{
+	width:350px;
+    height: 60px;
+	background-color: rgb(157,159,162);
+	border: none;
+    color: white;
+    padding: 1px 20px;
+    text-align: Center;
+    font-size: 35px;
+    border-radius: 12px;
+  }  
+
+input:focus {outline:none;}
