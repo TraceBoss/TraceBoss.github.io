@@ -150,6 +150,9 @@ td.custom{
 .settingSpace{
 	padding-top: 50px;
 } 
+.settingSpace2{
+	padding-bottom: 50px;
+} 
 .settingTableSpace{
 	border:3px solid rgb(157,159,162);
 	background-color: rgb(209,211,212);
@@ -220,7 +223,6 @@ a.custom2:hover {
 	font-size: 100%;
 	text-decoration: none;
 	border: none;
-	
 }
 a.custom3{
 	color: rgb(255,95,87);	
@@ -307,10 +309,29 @@ input.text1{
 	font-size: 40px;
 	padding-left: 10px;
 }
+input.text1custom{
+	height: 90px;
+	width:30%;
+	border:1px solid rgb(65,64,66);
+	border-radius: 15px;
+	font-size: 40px;
+	padding-left: 10px;
+}
 input.button5{
 	width:100%;
     height: 100%;
 	background-color: rgb(108,189,125);
+	border: none;
+    color: white;
+    padding: 1px 20px;
+    text-align: Center;
+    font-size: 35px;
+    border-radius: 12px;
+}
+input.button5red{
+	width:100%;
+    height: 100%;
+	background-color: rgb(255,95,87);
 	border: none;
     color: white;
     padding: 1px 20px;
