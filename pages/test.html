@@ -1,149 +1,85 @@
+<div id="readroot" style="display: none">
+        <input type="button" class="button5red" value="Remove" onclick="this.parentNode.remove();" /> 
+        <table>
+          <tr>
+            <td class="text1 textField">Customer Name</td>
+            <td class="text3 textField"></td>
+            <td class="text2 textField">Address</td>
+          </tr>
+          <tr> 
+            <td class="text1"><input name=cName type="text" class="text1" placeholder="Customer Name"></td>
+            <td class="text3"></td>
+            <td class="text2"><input name=address type="text" class="text1" placeholder="Address"></td>
+          </tr>
+        </table>
+        <table>
+          <tr class="space"> </tr>
+          <tr > 
+            <td class="text1 textField">Same as Location</td>
+            <td class="text3 textField"></td>
+            <td class="text2 textField">Billing Address</td>
+          </tr>
+          <tr> 
+            <td class="text1"><input name=saLocation type="text" class="text1" placeholder="Same as Location"></td>
+            <td class="text3"></td>
+            <td class="text2"><input name=billAddress type="text" class="text1" placeholder="Billing Address"></td>
+          </tr>
+        </table>
+        <table> 
+          <tr class="space"> </tr>
+          <tr > 
+            <td class="text2 textField">Contact Name</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Office Phone</td>
+          </tr>
+          <tr> 
+            <td class="text2"><input name=coName type="text" class="text1" placeholder="Contact Name"></td>
+            <td class="text3"></td>
+            <td class="text1"><input name=oPhone type="text" class="text1" placeholder="Office Phone"></td>
+          </tr>
+        </table>
+        <table > 
+          <tr class="space"> </tr>
+          <tr> 
+            <td class="text1 textField">Alternative Number</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Toll Free</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField"></td>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Papermashup.com | jQuery And PHP Dynamic forms</title>
-<link href="../style.css" rel="stylesheet" type="text/css" />
-    <link href="../dist/css/custom.css" rel="stylesheet">
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
-<script>
-$(document).ready(function(){
-
-
-	var i = $('input').size() + 1;
-	
-	$('#add').click(function() {
-		$('<div><input type="text" class="field" name="D" value="' + i + '" /></div>').fadeIn('slow').appendTo('.inputs');
-		i++;
-	});
-	
-	$('#remove').click(function() {
-	if(i > 1) {
-		$('.field:last').remove();
-		i--; 
-	}
-	});
-	
-	$('#reset').click(function() {
-	while(i > 2) {
-		$('.field:last').remove();
-		i--;
-	}
-	});
-	
-
-// here's our click function for when the forms submitted
-	
-	$('.submit').click(function(){
-								
-	
-	var answers = [];
-    $.each($('.D'), function() {
-        answers.push($(this).val()); 
-    });
-	
-    if(answers.length == 0) { 
-        answers = "none"; 
-    }   
-
-	alert(answers);
-	
-	return false;
-								
-	});
-	
-	
-
-});
-
-</script>
-
-<style>
-input{
-	border:1px solid #ccc;
-	padding:8px;
-	font-size:14px;
-	width:300px;
-	}
-	
-.submit{
-	width:110px;
-	background-color:#FF6;
-	padding:3px;
-	border:1px solid #FC0;
-	margin-top:20px;}	
-
-</style>
-
-</head>
-
-<body>
-
-<noscript><div id="noscript">You need JavaScript enabled to view most of the demos!</div></noscript>
-
-<div id="container">
-<div id="header"><a href="http://www.papermashup.com/"><img src="../images/logo.png" width="348" height="63" border="0" /></a></div>
-<div class="sky_ad" align="right">
-<!- Guardian Select: Technology & Media Tag Begins - Skyscraper ATF -> 
-<script src="http://s3-eu-west-1.amazonaws.com/aws-frontend-store/PROD/commercial/ad-gen.js" data-ad-unit="guardian-select/papermashup.com" data-ad-size="120x600,160x600" data-ad-target-slot="inline1" data-ad-target-n="technologyandmedia,professional" data-ad-target-s="businessandtechnology,marketing"></script>
-<!- Guardian Select: Technology & Media Tag Ends - Skyscraper ATF -> </div>
-<div id="inner_wrap">
-
-<div class="dynamic-form">
-
-<a href="#" id="add">Add</a> | <a href="#" id="remove">Remove</a>  | <a href="#" id="reset">Reset</a>  
-
-<form>
-<div class="inputs">
-<div><input type="text" name="dynamic[]" class="field" value="1"/></div>
+          </tr>
+          <tr>
+            <td class="text1"><input name=altNumber type="text" class="text1" placeholder="Alternative Number"></td>
+            <td class="text3"></td>
+            <td class="text1"><input name=tollfree type="text" class="text1" placeholder="Toll Free"></td>
+            <td class="text3"></td>
+          </tr>
+        </table> 
 </div>
-<input name="submit" type="button" class="submit" value="Submit" />
+<form method="post" action="index1.php"> <span id="writeroot"></span>
+
+    <input type="button" onclick="moreFields();" id="moreFieldsButton" value="Give me more fields!" />
+    <input type="submit" value="Send form" />
 </form>
-</div>
+
+<script>
+   var counter = 0;
 
 
+function moreFields() {
+    counter++;
+    var newFields = document.getElementById('readroot').cloneNode(true);
+    newFields.id = '';
+    newFields.style.display = 'block';
+    var newField = newFields.childNodes;
+    for (var i = 0; i < newField.length; i++) {
+        var theName = newField[i].name
+        if (theName) newField[i].name = theName + counter;
+    }
+    var insertHere = document.getElementById('writeroot');
+    insertHere.parentNode.insertBefore(newFields, insertHere);
+}
 
-
-
-
-</div>
-<div id="footer"> 
-
-	<section class="carbonad">
-			<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=papermashupcom" id="_carbonads_js"></script>
-			</section>
-
-
-&nbsp;<a href="http://www.papermashup.com">Papermashup.com</a> | <a href="http://feeds2.feedburner.com/AshleyFord-Papermashupcom">Subscribe</a> | <a href="http://papermashup.com/dynamically-add-form-inputs-and-submit-using-jquery/">Back To Tutorial</a><br/>
-
-
-
-<div class="google-advert" style=" margin-top:6px; height:100px">
-
-
-
-</div>
-</div>
-</div>
-
-
-
-<!-- PAPERMASHUP GOOGLE ANALYTICS CODE START - PLEASE REMOVE THIS JAVASCRIPT IF COPYING THE SOURCE CODE DIRECTLY -->
-<!-- DO NOT ADD THIS CODE TO YOUR WEBSITE!!!! -->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-7025232-16']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+window.onload = moreFields(); 
+    
 </script>
-<!-- PAPERMASHUP GOOGLE ANALYTICS CODE END - PLEASE REMOVE THIS JAVASCRIPT IF COPYING THE SOURCE CODE DIRECTLY -->
-</body>
-</html>

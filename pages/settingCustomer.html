@@ -66,7 +66,7 @@
 
   <div class="containerForm">
     <div class="containerFormInner">
-      <div id="settingCustomer" class="settingSpace2">  
+      <div id="readroot" style="display:none" class="settingSpace2">
         <table>
           <tr>
             <td class="text1 textField">Customer Name</td>
@@ -105,7 +105,7 @@
             <td class="text1"><input name=oPhone type="text" class="text1" placeholder="Office Phone"></td>
           </tr>
         </table>
-        <table> 
+        <table > 
           <tr class="space"> </tr>
           <tr> 
             <td class="text1 textField">Alternative Number</td>
@@ -120,21 +120,26 @@
             <td class="text3"></td>
             <td class="text1"><input name=tollfree type="text" class="text1" placeholder="Toll Free"></td>
             <td class="text3"></td>
-            <td class="text1 textField"></td>
           </tr>
-        </table> 
+        </table>
+        </br>
+        </br>
+        <input type="button" class="button5red" value="Remove" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" /> 
+       
       </div>
-      <form method="post" action="index1.php"> 
-            <span id="writeroot"></span> 
-            <input type="button" class="button5" onclick="moreFields();" id="moreFieldsButton" value="ADD ANOTHER CONTACT">
+      <form method="post" action="index1.php"> <span id="writeroot"></span>
+
+          <input type="button" class=button5 onclick="moreFields();" id="moreFieldsButton" value="Add Another Customer" />
+          </br>
+          </br>
+          </br>
+          <table>
+            <tr>
+              <td class=text5><input type="button" class="button7" value="Cancel" onclick="location.href='./settingCustomer.html';"/></td>
+              <td class=text4><input type="submit" class="button6" value="Save"></td>
+            </tr>
+          </table>
       </form>
-      <table> 
-        <tr class="space"> </tr>
-        <tr > 
-          <td class="text5"><input type="button" class="button7" value="Cancel"></td>
-          <td class="text4"><input type="button" class="button6" value="Save"></td>
-        </tr>
-      </table>
     </div>
   </div>
   <div class="settingSpace"/>
@@ -208,27 +213,27 @@
       </table>
     </div>
   </div>
-  <script>
-    var counter = -1;
-    function moreFields() {
-      counter++;
-      if(counter > 0){
-        var newFields = document.getElementById('settingCustomer').cloneNode(true);
-        newFields.id = '';
-        newFields.style.display = 'block';
-        var newField = newFields.childNodes;
-        for (var i = 0; i < newField.length; i++) {
-            var theName = newField[i].name
-            if (theName) newField[i].name = theName + counter;
-        }
-        var insertHere = document.getElementById('writeroot');
-        insertHere.parentNode.insertBefore(newFields, insertHere);
-      }
-    }
+<script>
+   var counter = 0;
 
-    window.onload = moreFields(); 
-        
-  </script>
+
+function moreFields() {
+    counter++;
+    var newFields = document.getElementById('readroot').cloneNode(true);
+    newFields.id = '';
+    newFields.style.display = 'block';
+    var newField = newFields.childNodes;
+    for (var i = 0; i < newField.length; i++) {
+        var theName = newField[i].name
+        if (theName) newField[i].name = theName + counter;
+    }
+    var insertHere = document.getElementById('writeroot');
+    insertHere.parentNode.insertBefore(newFields, insertHere);
+}
+
+window.onload = moreFields(); 
+    
+</script>
   <div class="settingSpace"/>      
   <!-- Bootstrap core JavaScript
   ================================================== -->
