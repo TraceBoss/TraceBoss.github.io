@@ -202,18 +202,18 @@ a:link, a:visited, a {
 	color: #FFFFFF;
 }
 a.custom{
-	font-size: 210%;
+	font-size: 100%;
 	font-weight: 600;
 	border-bottom: 2px solid #FF5F57;
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 	text-decoration: none;
 	color: #FF5F57;	
 }
 a:hover{
-	font-size: 210%;
+	font-size: 100%;
 	font-weight: 600;
 	border-bottom: 2px solid #FF5F57;
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 	text-decoration: none;
 	color: #FF5F57;
 }
