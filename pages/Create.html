@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="icon" href="../../favicon.ico">
+
+	<title>TraceBoss</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="../dist/css/bootstrap.css" rel="stylesheet">
+
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="../starter-template.css" rel="stylesheet">
+
+	<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+	<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<script src="../assets/js/ie-emulation-modes-warning.js"></script>
+	<link href="../dist/css/custom.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700' rel='stylesheet' type='text/css'>
+	<style>
+		body{
+			font-family: Source Sans Pro;
+		}
+	</style>
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<nav>
+	<div class="container2">	
+	   	<div id="navbar">
+	       	<div class="container4">	
+	        	<table class=custom>
+		        	<tr>
+		              	<td class="custom title"><b class="bold">T R A C E </b><b class="light">B O S S</b></td>
+		             	<td class="custom"><a href="../index.html">DashBoard</a></td>
+		             	<td class=custom><a class="custom">Create</a></td>
+		             	<td class=custom><a href="./assign.html">Assign</a></td>
+		             	<td class=custom><a href="./Dispatch.html">Dispatch</a></td>
+		             	<td class=custom><a href="#">POD</a></td>
+		            	<td class=custom><a href="#">Invoice</a></td>
+		            	<td class=custom><a href="./setting.html" class="custom2"><span class="glyphicon glyphicon-cog"></a></span></td>
+	            	</tr>
+	       		</table>
+	        </div>
+	    </div>
+	</div>
+</nav>
+
+<form method="post" action="index.php">
+<div class="padding2">
+	<div class="createforms">
+		<div class = "table1" >
+		<table>
+			<tr>
+				<td class="texttd8 textField">Load#</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd9 textField">Bill to</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd8 textField">Rate</td>
+			</tr>
+          	<tr> 
+            	<td class=texttd8><input name=Load# type="text" class="text1" placeholder="Load#" /></td>
+            	<td class=texttd5> </td>
+            	<td class=texttd9><input name=BillTo type="text" class="text1" placeholder="Bill to"></td>
+            	<td class=texttd5> </td>
+            	<td class=texttd8><input name=Rate type="text" class="text1" placeholder="Rate"></td>
+          	</tr>
+        </table>
+        </div>
+	</div> 
+</div>
+
+<div class="padding">
+	<div id="ShipperPanel" class="bannermax">
+		<table>
+			<tr>
+				<td class="textmax"> S H I P P E R </td>
+				<td class="glyphmax"> <span id="super" class="glyphicon glyphicon-plus-sign"></span> </td>
+			</tr>
+		</table>
+	</div> 
+	<div id="ShipperPanelForm" class=createforms>
+		<table>
+			<tr>
+				<td class="texttd4 textField">Shipper Name</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd4 textField">Address</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField">Date</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField">Time</td>
+			</tr>
+			<tr>
+				<td class="texttd4 "><input name=sName[] type="text" class="text1" placeholder="Shipper Name"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd4 "><input name=addressS[] type="text" class="text1" placeholder="Address"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=dateS[] type="date" class="text1" placeholder="Date"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=timeS[] type="time" class="text1" placeholder="Time"> </td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td class="texttd4 textField">Phone</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd4 textField">Description</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField">Qty</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField">Weight</td>
+			</tr>
+			<tr>
+				<td class="texttd4 "><input name=phoneS[] type="text" class="text1" placeholder="Phone"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd4 "><input name=descriptionS[] type="text" class="text1" placeholder="Description"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=qtyS[] type="number" class="text1" placeholder="Qty"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=weightS[] type="number" class="text1" placeholder="Weight"> </td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td class="texttd7 textField">Shipper Notes</td>
+				<td class="texttd5 textField"></td>
+				<td class="texttd6 textField">PO# </td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField">Pickup#</td>
+			</tr>
+			<tr>
+				<td class="texttd7 "><input name=shipperNotes[] type="text" class="text1" placeholder="Shipper Notes"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=poS[] type="number" class="text1" placeholder="PO#"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=puS[] type="number" class="text1" placeholder="Pickup#"> </td>
+			</tr>
+		</table>
+	</div>
+</div>
+	<div id="ShipperButton"class="createforms settingSpacing">
+		<table>
+			<tr>
+				<td class="createButton"><input type="button" class="button8" onclick="addRowS(this.form);" id="Add Another Customer" value="Add Another Customer" /></td>
+			</tr>
+		</table>
+	</div>>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#ShipperPanel').click(function(e) {  
+		  $('#ShipperPanelForm').slideToggle();
+		  $('#ShipperButton').slideToggle(); 
+		  $('#super').toggleClass('glyphicon-plus-sign green').toggleClass('glyphicon-minus-sign yellow');
+		});
+	});
+	</script>
+</div>
+
+<div class="padding">
+	<div id="CosigneePanel" class="bannermax">
+		<table>
+			<tr>
+				<td class="textmax"> C O S I G N E E</td>
+				<td class="glyphmax"> <span id="super2" class="glyphicon glyphicon-plus-sign "></span> </td>
+			</tr>
+		</table>
+	</div> 
+	<div id="CosigneePanelForm" class=createforms >
+		<table>
+			<tr>
+				<td class="texttd4 textField">Cosignee Name</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd4 textField">Address</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField">Date</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField">Time</td>
+			</tr>
+			<tr>
+				<td class="texttd4 "><input name=cName[] type="text" class="text1" placeholder="Cosignee Name"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd4 "><input name=addressC[] type="text" class="text1" placeholder="Address"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=dateC[] type="date" class="text1" placeholder="Date"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=timeC[] type="time" class="text1" placeholder="Time"> </td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td class="texttd4 textField">Phone</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd4 textField">Description</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField">Qty</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField">Weight</td>
+			</tr>
+			<tr>
+				<td class="texttd4 "><input name=phoneC[] type="text" class="text1" placeholder="Phone"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd4 "><input name=descriptionC[] type="text" class="text1" placeholder="Description"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=qtyC[] type="number" class="text1" placeholder="Qty"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=weightC[] type="number" class="text1" placeholder="Weight"> </td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td class="texttd7 textField">Shipper Notes</td>
+				<td class="texttd5 textField"></td>
+				<td class="texttd6 textField">PO# </td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField">Pickup#</td>
+			</tr>
+			<tr>
+				<td class="texttd7 "><input name=CosigneeNotes[] type="text" class="text1" placeholder="Shipper Notes"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=poC[] type="number" class="text1" placeholder="PO#"> </td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "><input name=puC[] type="number" class="text1" placeholder="Pickup#"> </td>
+			</tr>
+		</table>	
+	</div>
+	<div id="CosigneeButton" class="createforms settingSpacing">
+		<table>
+			<tr>
+				<td class="createButton"><input type="button" class="button8" onclick="addRowC(this.form);" id="Add Another Cosignee" value="Add Another Cosignee" /></td>
+			</tr>
+		</table>
+	</div>>
+
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('#CosigneePanel').click(function(e) {  
+		  $('#CosigneePanelForm').slideToggle();
+		  $('#CosigneeButton').slideToggle();
+		  $('#super2').toggleClass('glyphicon-plus-sign green').toggleClass('glyphicon-minus-sign yellow');
+		});
+	});
+	</script>
+</div>
+
+<div class="padding">
+	<div id="CustomBrokerPanel" class="bannermax">
+		<table>
+			<tr>
+				<td class="textmax"> C U S T O M  B R O K E R </td>
+				<td class="glyphmax"> <span id="super3" class="glyphicon glyphicon-plus-sign"></span> </td>
+			</tr>
+		</table>
+	</div> 
+	<div id="CustomBrokerPanelForm" class="createforms" >
+		<table>
+			<tr>
+				<td class="texttd4 textField">Cosignee Name</td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd4 textField"></td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField"></td>
+				<td class="texttd5 textField"> </td>
+				<td class="texttd6 textField"></td>
+			</tr>
+			<tr>
+				<td class="texttd4 "><input name=coName[] type="text" class="text1" placeholder="Custom Broker Name"> </td>
+			</tr>
+		</table>
+		<
+	</div>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#CustomBrokerPanel').click(function(e) {  
+			  $('#CustomBrokerPanelForm').slideToggle();
+			  $('#super3').toggleClass('glyphicon-plus-sign green').toggleClass('glyphicon-minus-sign yellow');
+			});
+		});
+		</script>
+</div>
+
+<div class="padding">
+	<div class="bannermax">
+		<div class = "table1" >
+		<table>
+          	<tr> 
+            	<td class=text5><input type="button" class="button7" value="Cancel" onclick="location.href='./Create.html';"/></td>
+            	<td class=text4><input type="submit" class="button6" value="Save"></td>
+          	</tr>
+        </table>
+        </div>
+	</div> 
+</div>
+</form>
+
+<script>
+var rowNum = 0;
+var rowNum2 = 0;
+function addRowS(frm) {
+   	rowNum ++;
+
+  	var row2 = '<table id="sTable'+rowNum+'" class=settingSpacing><tr><td class="textmax1"> S H I P P E R '+(rowNum + 1)+' </td><td><input class="button5red" type="button" onclick="removeRowS('+rowNum+')" value="Delete Row"> </td></tr></table><div class="padding"><div id="ShipperPanelForm'+rowNum+'" ><table><tr><td class="texttd4 textField">Shipper Name</td><td class="texttd5 textField"> </td><td class="texttd4 textField">Address</td><td class="texttd5 textField"> </td><td class="texttd6 textField">Date</td><td class="texttd5 textField"> </td><td class="texttd6 textField">Time</td></tr><tr><td class="texttd4 "><input name=sName[] type="text" class="text1" placeholder="Shipper Name"> </td><td class="texttd5 "></td><td class="texttd4 "><input name=addressS[] type="text" class="text1" placeholder="Address"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=dateS[] type="date" class="text1" placeholder="Date"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=timeS[] type="time" class="text1" placeholder="Time"> </td></tr></table><table><tr><td class="texttd4 textField">Phone</td><td class="texttd5 textField"> </td><td class="texttd4 textField">Description</td><td class="texttd5 textField"> </td><td class="texttd6 textField">Qty</td><td class="texttd5 textField"> </td><td class="texttd6 textField">Weight</td></tr><tr><td class="texttd4 "><input name=phoneS[] type="text" class="text1" placeholder="Phone"> </td><td class="texttd5 "></td><td class="texttd4 "><input name=descriptionS[] type="text" class="text1" placeholder="Description"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=qtyS[] type="number" class="text1" placeholder="Qty"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=weightS[] type="number" class="text1" placeholder="Weight"> </td></tr></table><table><tr><td class="texttd7 textField">Shipper Notes</td><td class="texttd5 textField"></td><td class="texttd6 textField">PO# </td><td class="texttd5 textField"> </td><td class="texttd6 textField">Pickup#</td></tr><tr><td class="texttd7 "><input name=shipperNotes[] type="text" class="text1" placeholder="Shipper Notes"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=poS[] type="number" class="text1" placeholder="PO#"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=puS[] type="number" class="text1" placeholder="Pickup#"> </td></tr></table></div></div>';
+	jQuery('#ShipperPanelForm').append(row2);
+}
+
+function addRowC(frm) {
+   	rowNum2 ++;
+  	var row2 = '<table id="cTable'+rowNum2+'" class=settingSpacing><tr><td class="textmax1"> C O S I G N E E '+(rowNum2+ 1)+' </td><td><input class="button5red" type="button" onclick="removeRowC('+rowNum2+')" value="Delete Row"> </td></tr></table><div class="padding"><div id="CosigneePanelForm'+rowNum2+'" ><table><tr><td class="texttd4 textField">Cosignee Name</td><td class="texttd5 textField"> </td><td class="texttd4 textField">Address</td><td class="texttd5 textField"> </td><td class="texttd6 textField">Date</td><td class="texttd5 textField"> </td><td class="texttd6 textField">Time</td></tr><tr><td class="texttd4 "><input name=cName[] type="text" class="text1" placeholder="Cosignee Name"> </td><td class="texttd5 "></td><td class="texttd4 "><input name=addressC[] type="text" class="text1" placeholder="Address"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=dateC[] type="date" class="text1" placeholder="Date"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=timeC[] type="time" class="text1" placeholder="Time"> </td></tr></table><table><tr><td class="texttd4 textField">Phone</td><td class="texttd5 textField"> </td><td class="texttd4 textField">Description</td><td class="texttd5 textField"> </td><td class="texttd6 textField">Qty</td><td class="texttd5 textField"> </td><td class="texttd6 textField">Weight</td></tr><tr><td class="texttd4 "><input name=phoneC[] type="text" class="text1" placeholder="Phone"> </td><td class="texttd5 "></td><td class="texttd4 "><input name=descriptionC[] type="text" class="text1" placeholder="Description"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=qtyC[] type="number" class="text1" placeholder="Qty"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=weightC[] type="number" class="text1" placeholder="Weight"> </td></tr></table><table><tr><td class="texttd7 textField">Cosignee Notes</td><td class="texttd5 textField"></td><td class="texttd6 textField">PO# </td><td class="texttd5 textField"> </td><td class="texttd6 textField">Pickup#</td></tr><tr><td class="texttd7 "><input name=cosigneeNotes[] type="text" class="text1" placeholder="Shipper Notes"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=poC[] type="number" class="text1" placeholder="PO#"> </td><td class="texttd5 "></td><td class="texttd6 "><input name=puC[] type="number" class="text1" placeholder="Pickup#"> </td></tr></table></div></div>';
+  	jQuery('#CosigneePanelForm').append(row2);
+}
+
+function removeRowS(rnum) {
+  	jQuery('#ShipperPanelForm'+rnum).remove();
+  	jQuery('#sTable'+rnum).remove();
+}
+
+function removeRowC(rnum) {
+  	jQuery('#CosigneePanelForm'+rnum).remove();
+  	jQuery('#cTable'+rnum).remove();
+}
+
+</script>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="./dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

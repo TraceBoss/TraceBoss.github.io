@@ -1,54 +1,31 @@
-<div id="readroot" style="display: none">
-    <br />
-    <br />
-    <input name="cd" value="title" />
-    <select name="rankingsel">
-        <option>Rating</option>
-        <option value="excellent">Excellent</option>
-        <option value="good">Good</option>
-        <option value="ok">OK</option>
-        <option value="poor">Poor</option>
-        <option value="bad">Bad</option>
-    </select>
-    <br />
-    <br />
-    <textarea rows="5" cols="20" name="review">Short review</textarea>
-    <br />Radio buttons included to test them in Explorer:
-    <br />
-    <input type="radio" name="something" value="test1" />Test 1
-    <br />
-    <input type="radio" name="something" value="test2" />Test 2</div>
-<form method="post" action="index1.php"> <span id="writeroot"></span>
-    <input type="button" onclick="moreFields();" id="moreFieldsButton" value="Give me more fields!" />
-    <input type="submit" value="Send form" />
-</form>
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>click demo</title>
+  <style>
+  div {
+    color: red;
+    margin: 5px;
+    cursor: pointer;
+  }
+  div:hover {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div class="as">First Paragraph</div>
+<div>Second Paragraph</div>
+<div>Yet one more Paragraph</div>
+ 
 <script>
-   var counter = 0;
-
-
-function moreFields() {
-    counter++;
-    var newFields = document.getElementById('readroot').cloneNode(true);
-    newFields.id = '';
-    newFields.style.display = 'block';
-    var newField = newFields.childNodes;
-    for (var i = 0; i < newField.length; i++) {
-        var theName = newField[i].name
-        if (theName) newField[i].name = theName + counter;
-    }
-    var insertHere = document.getElementById('writeroot');
-    insertHere.parentNode.insertBefore(newFields, insertHere);
-    removie();
-}
-function removie(){
-
-	if(counter >= 2)
-	{
-		var node = document.getElementById('readroot');
-		node.appendChild("<p>hello</p>");
-	}
-}
-window.onload = moreFields(); 
-    
+$( 'div.as' ).click(function() {
+  $( this ).slideUp();
+});
 </script>
+ 
+</body>
+</html>

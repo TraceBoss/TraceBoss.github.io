@@ -360,5 +360,101 @@ input.button6{
     text-align: Center;
     font-size: 35px;
     border-radius: 12px;
-  }  
+ }  
+input.button8{
+	width:32%;
+    height: 100%;
+	background-color: rgb(108,189,125);
+	border: none;
+    color: white;
+    padding: 1px 20px;
+    text-align: Center;
+    font-size: 35px;
+    border-radius: 12px;
+}
+
 input:focus {outline:none;}
+
+.green {
+	color: rgb(108,189,125);
+}
+td.textmax {
+	padding-left: 125px;
+	text-align: left;
+	font-size: 500%;
+	font-weight: 200;
+	color: rgb(255,95,87);
+}
+
+td.textmax1 {
+	text-align: left;
+	font-size: 500%;
+	font-weight: 200;
+	color: rgb(255,95,87);
+}
+td.glyphmax{
+	padding-top: 20px;
+	color: rgb(108,189,125);
+	font-size:-100%;
+	font-size: 400%;
+	text-align: right;
+	padding-right: 125px;
+}
+.bannermax1{
+
+	min-width: 1500px;
+	height: 100px;
+
+}
+.bannermax{
+	margin-top: 20px;
+	border-top: 1px solid black;
+	min-width: 1500px;
+	height: 100px;
+}
+.padding{
+	padding-bottom: 20px;
+}
+
+.padding2{
+	padding-top: 60px;
+	padding-bottom: 20px;
+
+}
+.yellow{
+	color: rgb(255,188,45);
+}
+.hidden{
+       display:none;
+ }
+.createforms{
+	min-width: 1500px;
+	padding-left: 7%;
+	padding-right:7%;
+}
+td.createButton{
+	text-align: right;
+	height: 90px;
+}
+td.texttd4{
+	width: 32%;
+}
+td.texttd5{
+	width: 2%;
+}
+td.texttd6{
+	width: 15%;
+}
+td.texttd7{
+	width: 66%;
+}
+.table1{
+	width: 100%;
+	padding-top: 20px;
+}
+td.texttd8{
+	width: 16%;
+}
+td.texttd9{
+	width: 64%;	
+}
