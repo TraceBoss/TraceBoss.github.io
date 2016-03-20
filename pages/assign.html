@@ -38,78 +38,135 @@
     <![endif]-->
   </head>
 
-  <body>
-      <nav >
-      	<div class="container2">	
-          <div id="navbar">
-	      <div class="container4">	
-	        <table class=custom>
-		         <tr>
-		             <td class="custom title"><b class="bold">T R A C E </b><b class="light">B O S S</b></td>
-		             <td class="custom"><a href="../index.html" >DashBoard</a></td>
-		             <td class=custom><a href="./Create.html">Create</a></td>
-		             <td class=custom><a class="custom">Assign</a></td>
-		             <td class=custom><a href="./Dispatch.html">Dispatch</a></td>
-		             <td class=custom><a href="#">POD</a></td>
-		             <td class=custom><a href="#">Invoice</a></td>
-		             <td class=custom><a href="./setting.html" class="custom2"><span class="glyphicon glyphicon-cog"></a></span></td>
-	        </table>
-	        </div>
-          </div>
+<body>
+  <nav>
+    <div class="container2">	
+      <div id="navbar">
+        <div class="container4">	
+          <table class=custom>
+            <tr>
+              <td class="custom title"><b class="bold">T R A C E </b><b class="light">B O S S</b></td>
+              <td class="custom"><a href="../index.html" >DashBoard</a></td>
+              <td class=custom><a href="./Create.html">Create</a></td>
+              <td class=custom><a class="custom">Assign</a></td>
+              <td class=custom><a href="./Dispatch.html">Dispatch</a></td>
+              <td class=custom><a href="#">POD</a></td>
+              <td class=custom><a href="#">Invoice</a></td>
+              <td class=custom><a href="./setting.html" class="custom2"><span class="glyphicon glyphicon-cog"></span></a></td>
+            </tr>
+          </table>
         </div>
-      </nav>
-    </div>        
-    <div class="container3">
-    	<table class="center buttons">
-		    <tr>
-		    	<td class=right><input type="button" class="button1"   value="  P I C K U P   " /></td>
-				<td class=left><input  type="button" class="button2" onclick="location.href='./assignDelivery.html';" value=" D E L I V E R Y " /></td>
-    		</tr>
-    	</table>
+      </div>
     </div>
-    <div class="container5">
-      <table class=" center info" >
-        <thead>
-        	<tr>
-	          <th>Load#</th>
-	          <th>Pickup Date</th>
-	          <th>Customer</th>
-	          <th>Pickup</th>
-	          <th>Truck</th>
-	          <th>Trailer</th>
-	          <th>Driver</th>
-	        </tr>
-	    </thead>
-	    <tbody>
-	    	<tr>
-	          <td>TH123</td>
-	          <td>Jul 04, 2016</td>
-	          <td>Sobeys</td>
-	          <td>Missauga</td>
-	          <td>408</td>
-	          <td>LGR5038</td>
-	          <td>Ravi</td>
-	        </tr>
-
-	    	<tr>
-	          <td>TH123</td>
-	          <td>Jul 04, 2016</td>
-	          <td>Sobeys</td>
-	          <td>Missauga</td>
-	          <td>408</td>
-	          <td>LGR5038</td>
-	          <td>Ravi</td>
-	        </tr>
-	    </tbody>
-      </table>
-    </div>
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+  </nav>
+  <div class="container3">
+    <table class="center buttons">
+      <tr>
+        <td class=right><input type="button" class="button1"   value="  P I C K U P   " /></td>
+        <td class=left><input  type="button" class="button2" onclick="location.href='./assignDelivery.html';" value=" D E L I V E R Y " /></td>
+      </tr>
+    </table>
+  </div>
+  <div class="container5">
+          <form id="theForm">
+    <table class=" center info" >
+      <thead>
+        <tr>
+          <th>Load#</th>
+          <th>Pickup Date</th>
+          <th>Customer</th>
+          <th>Pickup</th>
+          <th>Truck</th>
+          <th>Trailer</th>
+          <th>Driver</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>TH123</td>
+            <td>Jul 04, 2016</td>
+            <td>Sobeys</td>
+            <td>Missauga</td>
+            <td>
+              <select name =truck[] id=truck>
+                <option value="truck1">Truck1</option>
+                <option value="truck2">Truck2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+            <td>
+              <select name =truck[] id=trailer>
+                <option value="tr1">Tr1</option>
+                <option value="tr2">Tr2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+            <td>
+              <select name =truck[] id=driver>
+                <option value="tr1">driver1</option>
+                <option value="tr2">driver2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TH123</td>
+            <td>Jul 04, 2016</td>
+            <td>Sobeys</td>
+            <td>Missauga</td>
+            <td>
+              <select name =truck[] id=truck>
+                <option value="truck1">Truck1</option>
+                <option value="truck2">Truck2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+            <td>
+              <select name =truck[] id=trailer>
+                <option value="tr1">Tr1</option>
+                <option value="tr2">Tr2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+            <td>
+              <select name =truck[] id=driver>
+                <option value="tr1">driver1</option>
+                <option value="tr2">driver2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+    <script>
+      $(document).ready(function(){
+        $("#theForm").on('change','select',function(e) {
+          alert(e.target.value);
+          if(e.target.value == "addnew"){
+             alert(e.target.value + " 1");
+            if(e.target.id == "truck"){
+              alert(1);
+            }
+            if(e.target.id == "trailer"){
+              alert(2);
+            } 
+            if(e.target.id == "driver"){
+              alert(3);
+            }  
+          }
+        });
+      });
+    </script>
+  </div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
 </html>

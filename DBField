@@ -1,0 +1,109 @@
+Shipper/Cosignee:
+
+Company Name
+Branch Name
+Need a Appointment
+Contact Name
+Office phone
+Alternative NUmber
+Toll Free
+
+
+
+
+Customer:
+
+Customer Name
+Address
+Same as Location
+Billing Address
+Contact Name
+Office phone
+Alternative Number
+Toll Free
+
+
+
+
+Custom Broker:
+
+Custom Broker name
+Branch Name
+Hours of Operation
+Address
+Email 
+Contact Name
+Office phopne
+Fax
+Toll Free
+
+
+Unit: 
+
+unit#
+Unit Type
+Year 
+Make 
+Plate
+VIN
+Status
+Colour
+
+
+Driver:
+
+No
+Phone
+Last Name
+First Name
+Action
+
+
+Your Company:
+
+Your Company Name
+Your Address
+Same as Location
+Billing Address
+Contact Name
+Office Phone
+Alt Num
+Toll Free
+
+Load:
+
+Load NUmber
+BIll to
+Rate
+
+Load-Shipper
+Load#
+Shipper-Branch
+Date
+Time
+Qty
+Weight
+PO#
+Pickup#
+Shipper-Notes
+
+Load Cosignee 
+Load#
+Cosignee-Branch
+Date
+Time
+Qty
+Weight
+PO#
+Pickup#
+Cosignee#
+
+Load Custom:
+load#
+custome Broker
+
+Load Assign:
+Load#
+Truck
+Trailer
+Driver

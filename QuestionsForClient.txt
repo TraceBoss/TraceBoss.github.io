@@ -1,0 +1,9 @@
+Should the truck Trailer and driver in Assign just all be drop down lists with the ability to add new ones?
+
+For create what fields shoule auto fill in (Example descripition in shipper does that come from already stored data. If so where do you want the user to enter it.
+)?
+
+Where does PO come from cause it was never specified as an input field for Setting Cusomer?
+
+In Settings Shipper and Setting Customers what do you want the NO to be is it just some number I assign in the back end?
+

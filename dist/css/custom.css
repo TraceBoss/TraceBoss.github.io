@@ -84,7 +84,7 @@ body{
 }
 .navbar {
 	padding-left: 150px;
-	padding-right: 150px;
+	padding-right: 150px;0
 	align-content: center;
 	font-size: 200%;
 	background-color: rgb(65,64,66);
@@ -424,6 +424,9 @@ td.glyphmax{
 .yellow{
 	color: rgb(255,188,45);
 }
+.red{
+	color: rgb(255,95,87);
+}
 .hidden{
        display:none;
  }
@@ -458,3 +461,11 @@ td.texttd8{
 td.texttd9{
 	width: 64%;	
 }
+select {
+	width:100%;
+	height:100%;
+	padding-left: -10px;
+	border: none;
+  	background-color: transparent !important;
+}
+select:focus {outline:none;}

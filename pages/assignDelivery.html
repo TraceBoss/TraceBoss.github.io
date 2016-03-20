@@ -68,42 +68,110 @@
     		</tr>
     	</table>
     </div>
-    <div class="container5">
-      <table class=" center info" >
-        <thead>
-        	<tr>
-	          <th>Load#</th>
-	          <th>Delivery Date</th>
-	          <th>Customer</th>
-	          <th>Destination</th>
-	          <th>Truck</th>
-	          <th>Trailer</th>
-	          <th>Driver</th>
-	        </tr>
-	    </thead>
-	    <tbody>
-	    	<tr>
-	          <td>TH123</td>
-	          <td>Jul 04, 2016</td>
-	          <td>Sobeys</td>
-	          <td>Missauga</td>
-	          <td>408</td>
-	          <td>LGR5038</td>
-	          <td>Ravi</td>
-	        </tr>
+   <div class="container5">
+   <form id="theForm">
+    <table class=" center info" >
+      <thead>
+        <tr>
+          <th>Load#</th>
+          <th>Delivery Date</th>
+          <th>Customer</th>
+          <th>Destination</th>
+          <th>Truck</th>
+          <th>Trailer</th>
+          <th>Driver</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>TH123</td>
+            <td>Jul 04, 2016</td>
+            <td>Sobeys</td>
+            <td>Missauga</td>
+            <td>
+              <select name =truck[] id=truck>
+                <option value="truck1">Truck1</option>
+                <option value="truck2">Truck2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+            <td>
+              <select name =truck[] id=trailer>
+                <option value="tr1">Tr1</option>
+                <option value="tr2">Tr2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+            <td>
+              <select name =truck[] id=driver>
+                <option value="tr1">driver1</option>
+                <option value="tr2">driver2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TH123</td>
+            <td>Jul 04, 2016</td>
+            <td>Sobeys</td>
+            <td>Missauga</td>
+            <td>
+              <select name =truck[] id=truck>
+                <option value="truck1">Truck1</option>
+                <option value="truck2">Truck2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+            <td>
+              <select name =truck[] id=trailer>
+                <option value="tr1">Tr1</option>
+                <option value="tr2">Tr2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+            <td>
+              <select name =truck[] id=driver>
+                <option value="tr1">driver1</option>
+                <option value="tr2">driver2</option>
+                <option value="addnew">AddNew</option>  
+              </select>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#theForm").on('change','select',function(e) {
+          alert(e.target.value);
+          if(e.target.value == "addnew"){
+             alert(e.target.value + " 1");
+            if(e.target.id == "truck"){
+              alert(1);
+            }
+            if(e.target.id == "trailer"){
+              alert(2);
+            } 
+            if(e.target.id == "driver"){
+              alert(3);
+            }  
+          }
+        });
+      });
+    </script>
+  </div>
 
-	    	<tr>
-	          <td>TH123</td>
-	          <td>Jul 04, 2016</td>
-	          <td>Sobeys</td>
-	          <td>Missauga</td>
-	          <td>408</td>
-	          <td>LGR5038</td>
-	          <td>Ravi</td>
-	        </tr>
-	    </tbody>
-      </table>
-    </div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../dist/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
