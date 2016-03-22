@@ -139,7 +139,8 @@
       </tbody>
     </table>
     </form>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>
       $(document).ready(function(){
         $("#theForm").on('change','select',function(e) {
@@ -148,19 +149,143 @@
              alert(e.target.value + " 1");
             if(e.target.id == "truck"){
               alert(1);
+              $("#contactdiv").css("display", "block");
             }
             if(e.target.id == "trailer"){
-              alert(2);
+              $("#contactdiv").css("display", "block");
             } 
             if(e.target.id == "driver"){
-              alert(3);
+              $("#driverdiv").css("display", "block");
             }  
           }
         });
       });
-    </script>
+      function hide() {
+               alert(3);
+        $("#contactdiv").css("display", "none");
+      };
+      function hideDriver() {
+             alert(3);
+        $("#driverdiv").css("display", "none");
+      };
+  </script>
+  <div class="contactdiv" id="contactdiv">
+    <form class="form" action="post" id="unitType">
+      <div class="SettingTitle2">
+        <p class="color">S E T T I N G / <strong>U N I T</strong></p> 
+      </div>
+      <div class="padding1">
+      <table>
+        <tr>
+          <td class="text1 textField">Unit #</td>
+          <td class="text3 textField"></td>
+          <td class="text1 textField">Unit Type</td>
+          <td class="text3 textField"></td>
+          <td class="text1 textField">year</td>
+        </tr>
+        <tr>
+          <td class="text1 "><input name=unit type="text" class="text1" placeholder="Unit #"> </td>
+          <td class="text3 "></td>
+          <td class="text1 ">
+              <select name =unitType placeholder="Unit Type" class="txt1" id=unitType>
+                <option value="trucks">Truck</option>
+                <option value="trailers">Trailer</option>
+              </select>
+          </td>
+          <td class="text3 "></td>
+          <td class="text1 "><input name=year type="number" class="text1" placeholder="Year"> </td>
+        </tr>
+      </table>
+      <table>
+          <tr>
+            <td class="text1 textField">Make</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Plate</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">VIN</td>
+          </tr>
+          <tr>
+            <td class="text1 "><input name=make type="text" class="text1" placeholder="Make"> </td>
+            <td class="text3 "></td>
+            <td class="text1 "><input name=plate type="text" class="text1" placeholder="Plate"> </td>
+            <td class="text3 "></td>
+            <td class="text1 "><input name=vin type="text" class="text1" placeholder="VIN"> </td>
+          </tr>
+      </table>
+      <table>
+          <tr>
+            <td class="text1 textField">Status</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Colour</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField"></td>
+          </tr>
+          <tr>
+            <td class="text1 "><input name=Status type="text" class="text1" placeholder="status"> </td>
+            <td class="text3 "></td>
+            <td class="text1 "><input name=Colour type="text" class="text1" placeholder="colour"> </td>
+            <td class="text3 "></td>
+            <td class="text1 "></td>
+            </tr>
+      </table>
+      </br>
+      <table>
+        <tr>
+          <td class=text5><input type="button" class="button7" value="Cancel" onclick=hide(); /></td>
+          <td class=text4><input type="submit" class="button6" value="Save"></td>
+        </tr>
+      </table>
+      </div>
+    </form>
   </div>
-
+ <div class="contactdiv" id="driverdiv">
+    <form class="form" action="post" id="driver">
+      <div class="SettingTitle2">
+        <p class="color">S E T T I N G / <strong>D R I V E R</strong></p> 
+      </div>
+      <div class="padding1">
+      <table>
+          <tr>
+            <td class="text1 textField">First Name</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Middle Name</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Last Name</td>
+          </tr>
+          <tr>
+            <td class="text1 "><input name=fname type="text" class="text1" placeholder="First Name"> </td>
+            <td class="text3 "></td>
+            <td class="text1 "><input name=mname type="text" class="text1" placeholder="Middle Name"> </td>
+            <td class="text3 "></td>
+            <td class="text1 "><input name=lname type="text" class="text1" placeholder="Last Name"> </td>
+          </tr>
+      </table>
+      <table>
+          <tr>
+            <td class="text1 textField">Cell Phone</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Alternative Number</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Software ID</td>
+          </tr>
+          <tr>
+            <td class="text1 "><input name=cphone type="text" class="text1" placeholder="Cell Phone"> </td>
+            <td class="text3 "></td>
+            <td class="text1 "><input name=altnum type="text" class="text1" placeholder="Alternative Number"> </td>
+            <td class="text3 "></td>
+            <td class="text1 "><input name=softid type="text" class="text1" placeholder="Software ID"></td>
+            </tr>
+      </table>
+      </br>
+      <table>
+        <tr>
+          <td class=text5><input type="button" class="button7" value="Cancel" onclick=hideDriver(); /></td>
+          <td class=text4><input type="submit" class="button6" value="Save"></td>
+        </tr>
+      </table>
+      </div>
+    </form>
+  </div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
