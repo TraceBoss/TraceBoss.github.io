@@ -1,9 +1,11 @@
-Should the truck Trailer and driver in Assign just all be drop down lists with the ability to add new ones?
+What is the drop down list settings for Same as Location?
 
-For create what fields shoule auto fill in (Example descripition in shipper does that come from already stored data. If so where do you want the user to enter it.
-)?
+What is the drop down list option need an appointment?
 
-Where does PO come from cause it was never specified as an input field for Setting Cusomer?
+What is the status drop down options?
 
-In Settings Shipper and Setting Customers what do you want the NO to be is it just some number I assign in the back end?
+What is the options for unit type?
 
+What is the drop down rate questions?
+
+What is tax rates?

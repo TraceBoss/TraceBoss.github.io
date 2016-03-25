@@ -144,11 +144,8 @@
     <script>
       $(document).ready(function(){
         $("#theForm").on('change','select',function(e) {
-          alert(e.target.value);
           if(e.target.value == "addnew"){
-             alert(e.target.value + " 1");
             if(e.target.id == "truck"){
-              alert(1);
               $("#contactdiv").css("display", "block");
             }
             if(e.target.id == "trailer"){
@@ -161,11 +158,9 @@
         });
       });
       function hide() {
-               alert(3);
         $("#contactdiv").css("display", "none");
       };
       function hideDriver() {
-             alert(3);
         $("#driverdiv").css("display", "none");
       };
   </script>

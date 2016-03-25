@@ -76,21 +76,23 @@
           	<tr> 
             	<td class=texttd8><input name=Load# type="text" class="text1" placeholder="Load#" /></td>
             	<td class=texttd5> </td>
-            	<td class=texttd9><input name=BillTo type="text" class="text1" placeholder="Bill to"></td>
+            	<td class=texttd9><input name=BillTo type="text" class="text2" style="width: 95%;" placeholder="Bill to"><button class="addne" style="width: 5%;" type=button onclick=showCustomer();><span class="glyphicon glyphicon glyphicon-triangle-bottom white"></span></button></td>
             	<td class=texttd5> </td>
-            	<td class=texttd8><input name=Rate type="text" class="text1" placeholder="Rate"></td>
+            	<td class=texttd8><input name=Rate type="text" class="text2 " style=width:85%; placeholder="Rate"><button class="addne" style=width:15%;  type=button onclick=showRate();><span class="glyphicon glyphicon glyphicon-triangle-bottom white"></span></button></td>
           	</tr>
         </table>
         </div>
 	</div> 
 </div>
 
+
+
 <div class="padding">
 	<div id="ShipperPanel" class="bannermax">
 		<table>
 			<tr>
 				<td class="textmax"> S H I P P E R </td>
-				<td class="glyphmax"> <span id="super" class="glyphicon glyphicon-plus-sign"></span> </td>
+				<td class="glyphmax"> <span id="super" class="glyphicon glyphicon-minus-sign yellow"></span> </td>
 			</tr>
 		</table>
 	</div> 
@@ -106,7 +108,7 @@
 				<td class="texttd6 textField">Time</td>
 			</tr>
 			<tr>
-				<td class="texttd4 "><input name=sName[] type="text" class="text1" placeholder="Shipper Name"> </td>
+				<td class="texttd4" ><input name=sName[] type="text" class="text2" placeholder="Shipper Name"><button class="addne" type=button onclick=show();><span class="glyphicon glyphicon glyphicon-triangle-bottom white"></span></button> </td>
 				<td class="texttd5 "></td>
 				<td class="texttd4 "><input name=addressS[] type="text" class="text1" placeholder="Address"> </td>
 				<td class="texttd5 "></td>
@@ -153,7 +155,7 @@
 		</table>
 	</div>
 </div>
-	<div id="ShipperButton"class="createforms settingSpacing">
+	<div id="ShipperButton"class="createforms settingSpacing marginCreate">
 		<table>
 			<tr>
 				<td class="createButton"><input type="button" class="button8" onclick="addRowS(this.form);" id="Add Another Customer" value="Add Another Customer" /></td>
@@ -168,16 +170,30 @@
 		  $('#ShipperButton').slideToggle(); 
 		  $('#super').toggleClass('glyphicon-plus-sign green').toggleClass('glyphicon-minus-sign yellow');
 		});
+
 	});
+	function show() {
+		$("#ShipperContact").css("display", 'block');
+		$("#BrokerContact").css("display", 'none');
+		$("#CosigneeContact").css("display", 'none');
+		$("#CustomerContact").css("display", 'none');
+		$("#RateContact").css("display", 'none');
+		
+	}
+	function hide() {
+		$("#ShipperContact").css("display", 'none');
+	}
 	</script>
 </div>
+
+
 
 <div class="padding">
 	<div id="CosigneePanel" class="bannermax">
 		<table>
 			<tr>
 				<td class="textmax"> C O S I G N E E</td>
-				<td class="glyphmax"> <span id="super2" class="glyphicon glyphicon-plus-sign "></span> </td>
+				<td class="glyphmax"> <span id="super2" class="glyphicon glyphicon-minus-sign yellow "></span> </td>
 			</tr>
 		</table>
 	</div> 
@@ -193,7 +209,7 @@
 				<td class="texttd6 textField">Time</td>
 			</tr>
 			<tr>
-				<td class="texttd4 "><input name=cName[] type="text" class="text1" placeholder="Cosignee Name"> </td>
+				<td class="texttd4 "><input name=cName[] type="text" class="text2" placeholder="Cosignee Name"><button class="addne" type=button onclick=showCosignee();><span class="glyphicon glyphicon glyphicon-triangle-bottom white"></span></button>  </td>
 				<td class="texttd5 "></td>
 				<td class="texttd4 "><input name=addressC[] type="text" class="text1" placeholder="Address"> </td>
 				<td class="texttd5 "></td>
@@ -239,7 +255,7 @@
 			</tr>
 		</table>	
 	</div>
-	<div id="CosigneeButton" class="createforms settingSpacing">
+	<div id="CosigneeButton" class="createforms settingSpacing marginCreate">
 		<table>
 			<tr>
 				<td class="createButton"><input type="button" class="button8" onclick="addRowC(this.form);" id="Add Another Cosignee" value="Add Another Cosignee" /></td>
@@ -255,34 +271,54 @@
 		  $('#super2').toggleClass('glyphicon-plus-sign green').toggleClass('glyphicon-minus-sign yellow');
 		});
 	});
+	function showCosignee() {
+		$("#CosigneeContact").css("display", 'block');
+		$("#ShipperContact").css("display", 'none');
+		$("#BrokerContact").css("display", 'none');
+		$("#RateContact").css("display", 'none');
+		$("#CustomerContact").css("display", 'none');
+		
+	}
+	function hideCosignee() {
+		$("#CosigneeContact").css("display", 'none');
+	}
 	</script>
 </div>
+
+
+
+
 
 <div class="padding">
 	<div id="CustomBrokerPanel" class="bannermax">
 		<table>
 			<tr>
 				<td class="textmax"> C U S T O M  B R O K E R </td>
-				<td class="glyphmax"> <span id="super3" class="glyphicon glyphicon-plus-sign"></span> </td>
+				<td class="glyphmax"> <span id="super3" class="glyphicon glyphicon-minus-sign yellow"></span> </td>
 			</tr>
 		</table>
 	</div> 
 	<div id="CustomBrokerPanelForm" class="createforms" >
 		<table>
 			<tr>
-				<td class="texttd4 textField">Cosignee Name</td>
+				<td class="texttd4 textField">Custome Broker Name</td>
 				<td class="texttd5 textField"> </td>
 				<td class="texttd4 textField"></td>
 				<td class="texttd5 textField"> </td>
 				<td class="texttd6 textField"></td>
 				<td class="texttd5 textField"> </td>
 				<td class="texttd6 textField"></td>
-			</tr>
-			<tr>
-				<td class="texttd4 "><input name=coName[] type="text" class="text1" placeholder="Custom Broker Name"> </td>
+			</tr><tr>
+				<td class="texttd4 "><input name=brokerName[] type="text" class="text2" placeholder="Custom Broker Name"><button class="addne" type=button onclick=showBroker();><span class="glyphicon glyphicon glyphicon-triangle-bottom white"></span></button>  </td>
+				<td class="texttd5 "></td>
+				<td class="texttd4 "></td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "></td>
+				<td class="texttd5 "></td>
+				<td class="texttd6 "></td>
 			</tr>
 		</table>
-		<
+		
 	</div>
 		<script type="text/javascript">
 		$(document).ready(function() {
@@ -291,7 +327,39 @@
 			  $('#super3').toggleClass('glyphicon-plus-sign green').toggleClass('glyphicon-minus-sign yellow');
 			});
 		});
-		</script>
+		function showBroker() {
+			$("#BrokerContact").css("display", 'block');
+			$("#ShipperContact").css("display", 'none');
+			$("#CosigneeContact").css("display", 'none');
+			$("#CustomerContact").css("display", 'none');
+			$("#RateContact").css("display", 'none');
+		}
+		function hideBroker() {
+			$("#BrokerContact").css("display", 'none');
+		}	
+
+		function showCustomer() {
+			$("#BrokerContact").css("display", 'none');
+			$("#ShipperContact").css("display", 'none');
+			$("#CosigneeContact").css("display", 'none');
+			$("#CustomerContact").css("display", 'block');
+			$("#RateContact").css("display", 'none');
+		}
+		function hideCustomer() {
+			$("#CustomerContact").css("display", 'none');
+		}	
+		
+		function showRate() {
+			$("#BrokerContact").css("display", 'none');
+			$("#ShipperContact").css("display", 'none');
+			$("#CosigneeContact").css("display", 'none');
+			$("#CustomerContact").css("display", 'none');
+			$("#RateContact").css("display", 'block');
+		}
+		function hideRate() {
+			$("#RateContact").css("display", 'none');
+		}		
+	</script>
 </div>
 
 <div class="padding">
@@ -307,6 +375,359 @@
 	</div> 
 </div>
 </form>
+
+
+
+
+<div class="contactdiv" id="ShipperContact">
+	<form class="form" action="post" id="unitType">
+	  <div class="SettingTitle3">
+	    <p class="color">S E T T I N G / <strong>S H I P P E R</strong></p> 
+	  </div>
+	  <div class="padding1">
+	  <table>
+	    <tr>
+	      <td class="text1 textField">Company Name</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField">Branch Name</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField">Shipping Hours</td>
+	    </tr>
+	    <tr>
+	      <td class="text1 "><input name=company[] type="text" class="text1" placeholder="Unit #"></td>
+	      <td class="text3 "></td>
+	      <td class="text1 "><input name=bName[] type"text" class="text1" placeholder="Branch Name"></td>
+	      <td class="text3 "></td>
+	      <td class="text1 "><input name=sHours[] type="number" class="text1" placeholder="Shipping hours"> </td>
+	    </tr>
+	  </table>
+	  <table>
+	      <tr>
+	        <td class="text2 textField">Address</td>
+	        <td class="text3 textField"></td>
+	        <td class="text1 textField">Need an Appointment</td>
+	      </tr>
+	      <tr>
+	        <td class="text2 "><input name=address[] type="text" class="text1" placeholder="Address "> </td>
+	        <td class="text3 "></td>
+	        <td class="text1 "><input name=appointment[] type="text" class="text1" placeholder="Need an Appointment"> </td>
+	      </tr>
+	  </table>
+	  <table>
+	      <tr>
+	        <td class="text2 textField">Contact Name</td>
+	        <td class="text3 textField"></td>
+	        <td class="text1 textField">Office Phone</td>
+	      </tr>
+	      <tr>
+	        <td class="text2 "><input name=cName[] type="text" class="text1" placeholder="Contact Name"> </td>
+	        <td class="text3 "></td>
+	        <td class="text1 "><input name=oPhone[] type="text" class="text1" placeholder="Office Phone"> </td>
+	      </tr>
+	  </table>
+	  <table>
+	    <tr>
+	      <td class="text1 textField">Alternative Num</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField">Toll Free</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField"></td>
+	    </tr>
+	    <tr>
+	      <td class="text1 "><input name=company[] type="text" class="text1" placeholder="Unit #"> </td>
+	      <td class="text3 "></td>
+	      <td class="text1 "><input name=bName[] type"text" class="text1" placeholder="Branch Name"></td>
+	      <td class="text3 "></td>
+	      <td class="text1 "></td>
+	    </tr>/
+	  </table>
+	  </br>
+	  <table>
+	    <tr>
+	      <td class=text5><input type="button" class="button7" value="Cancel" onclick=hide(); /></td>
+	      <td class=text4><input type="submit" class="button6" value="Save"></td>
+	    </tr>
+	  </table>
+	  </div>
+	</form>
+</div>
+
+
+
+<div class="contactdiv" id="CosigneeContact">
+	<form class="form" action="post" id="unitType">
+	  <div class="SettingTitle3">
+	    <p class="color">S E T T I N G / <strong>C O S I G N E E</strong></p> 
+	  </div>
+	  <div class="padding1">
+	  <table>
+	    <tr>
+	      <td class="text1 textField">Company Name</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField">Branch Name</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField">Shipping Hours</td>
+	    </tr>
+	    <tr>
+	      <td class="text1 "><input name=company[] type="text" class="text1" placeholder="Unit #"> </td>
+	      <td class="text3 "></td>
+	      <td class="text1 "><input name=bName[] type"text" class="text1" placeholder="Branch Name"></td>
+	      <td class="text3 "></td>
+	      <td class="text1 "><input name=sHours[] type="number" class="text1" placeholder="Shipping hours"> </td>
+	    </tr>
+	  </table>
+	  <table>
+	      <tr>
+	        <td class="text2 textField">Address</td>
+	        <td class="text3 textField"></td>
+	        <td class="text1 textField">Need an Appointment</td>
+	      </tr>
+	      <tr>
+	        <td class="text2 "><input name=address[] type="text" class="text1" placeholder="Address "> </td>
+	        <td class="text3 "></td>
+	        <td class="text1 "><input name=appointment[] type="text" class="text1" placeholder="Need an Appointment"> </td>
+	      </tr>
+	  </table>
+	  <table>
+	      <tr>
+	        <td class="text2 textField">Contact Name</td>
+	        <td class="text3 textField"></td>
+	        <td class="text1 textField">Office Phone</td>
+	      </tr>
+	      <tr>
+	        <td class="text2 "><input name=cName[] type="text" class="text1" placeholder="Contact Name"> </td>
+	        <td class="text3 "></td>
+	        <td class="text1 "><input name=oPhone[] type="text" class="text1" placeholder="Office Phone"> </td>
+	      </tr>
+	  </table>
+	  <table>
+	    <tr>
+	      <td class="text1 textField">Alternative Num</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField">Toll Free</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField"></td>
+	    </tr>
+	    <tr>
+	      <td class="text1 "><input name=company[] type="text" class="text1" placeholder="Unit #"> </td>
+	      <td class="text3 "></td>
+	      <td class="text1 "><input name=bName[] type"text" class="text1" placeholder="Branch Name"></td>
+	      <td class="text3 "></td>
+	      <td class="text1 "></td>
+	    </tr>
+	  </table>
+	  </br>
+	  <table>
+	    <tr>
+	      <td class=text5><input type="button" class="button7" value="Cancel" onclick=hideCosignee(); /></td>
+	      <td class=text4><input type="submit" class="button6" value="Save"></td>
+	    </tr>
+	  </table>
+	  </div>
+	</form>
+</div>
+
+
+
+<div class="contactdiv" id="BrokerContact">
+	<form class="form" action="post" id="unitType">
+	  <div class="SettingTitle3">
+	    <p class="color">S E T T I N G / <strong>C U S T O M   B R O K E R</strong></p> 
+	  </div>
+	  <div class="padding1">
+	  <table>
+	    <tr>
+	      <td class="text1 textField">Custom Broker Name</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField">Branch Name</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField">Hours of Operation</td>
+	    </tr>
+	    <tr>
+	      <td class="text1 "><input name=cbName[] type="text" class="text1" placeholder="Custom Broker Name"> </td>
+	      <td class="text3 "></td>
+	      <td class="text1 "><input name=branchName[] type"text" class="text1" placeholder="Branch Name"></td>
+	      <td class="text3 "></td>
+	      <td class="text1 "><input name=oJpir[] type="number" class="text1" placeholder="Hours of Operation"> </td>
+	    </tr>
+	  </table>
+	  <table>
+	      <tr>
+	        <td class="text2 textField">Address</td>
+	        <td class="text3 textField"></td>
+	        <td class="text1 textField">Email</td>
+	      </tr>
+	      <tr>
+	        <td class="text2 "><input name=address[] type="text" class="text1" placeholder="Address "> </td>
+	        <td class="text3 "></td>
+	        <td class="text1 "><input name=email[] type="text" class="text1" placeholder="Email"> </td>
+	      </tr>
+	  </table>
+	  <table>
+	      <tr>
+	        <td class="text2 textField">Fax</td>
+	        <td class="text3 textField"></td>
+	        <td class="text1 textField">Toll Free</td>
+	      </tr>
+	      <tr>
+	        <td class="text2 "><input name=fax[] type="text" class="text1" placeholder="Fax"> </td>
+	        <td class="text3 "></td>
+	        <td class="text1 "><input name=tPhone[] type="text" class="text1" placeholder="tFree"> </td>
+	      </tr>
+	  </table>
+	  <table>
+	    <tr>
+	      <td class="text1 textField">Alternative Number</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField">Toll Free</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField"></td>
+	    </tr>
+	    <tr>
+	      <td class="text1 "><input name=altnum[] type="text" class="text1" placeholder="Alternative Number"> </td>
+	      <td class="text3 "></td>
+	      <td class="text1 "><input name=TollFreeName[] type"text" class="text1" placeholder="Toll Free"></td>
+	      <td class="text3 "></td>
+	      <td class="text1 "></td>
+	    </tr>	  
+	    </table>
+	  </br>
+	  <table>
+	    <tr>
+	      <td class=text5><input type="button" class="button7" value="Cancel" onclick=hideBroker(); /></td>
+	      <td class=text4><input type="submit" class="button6" value="Save"></td>
+	    </tr>
+	  </table>
+	  </div>
+	</form>
+</div>
+
+
+
+<div class="contactdiv" id="CustomerContact">
+	<form class="form" action="post" id="unitType">
+	  <div class="SettingTitle3">
+	    <p class="color">S E T T I N G / <strong>C U S T O M E R</strong></p> 
+	  </div>
+	  <div class="padding1">
+	  <table>
+	    <tr>
+ 			<td class="text1 textField">Customer Name</td>
+            <td class="text3 textField"></td>
+            <td class="text2 textField">Address</td>
+	    </tr>
+	    <tr>
+            <td class="text1"><input name=cName[] type="text" class="text1" placeholder="Customer Name"></td>
+            <td class="text3"></td>
+            <td class="text2"><input name=address[] type="text" class="text1" placeholder="Address"></td>
+	    </tr>
+	  </table>
+	  <table>
+	      <tr>
+              <td class="text1 textField">Same as Location</td>
+              <td class="text3 textField"></td>
+              <td class="text2 textField">Billing Address</td>
+	      </tr>
+	      <tr>
+              <td class="text1"><input name=saLocation[] type="text" class="text1" placeholder="Same as Location"></td>
+              <td class="text3"></td>
+              <td class="text2"><input name=billAddress[] type="text" class="text1" placeholder="Billing Address"></td></td>
+	      </tr>
+	  </table>
+	  <table>
+	      <tr>
+              <td class="text2 textField">Contact Name</td>
+              <td class="text3 textField"></td>
+              <td class="text1 textField">Office Phone</td>
+	      </tr>
+	      <tr>
+	        <td class="text2"><input name=coName[] type="text" class="text1" placeholder="Contact Name"></td>
+              <td class="text3"></td>
+              <td class="text1"><input name=oPhone[] type="text" class="text1" placeholder="Office Phone"></td> </td>
+	      </tr>
+	  </table>
+	  <table>
+	    <tr>
+	      <td class="text1 textField">Alternative Number</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField">Toll Free</td>
+	      <td class="text3 textField"></td>
+	      <td class="text1 textField"></td>
+	    </tr>
+	    <tr>
+	      <td class="text1 "><input name=altnum[] type="text" class="text1" placeholder="Alternative Number"> </td>
+	      <td class="text3 "></td>
+	      <td class="text1 "><input name=TollFreeName[] type"text" class="text1" placeholder="Toll Free"></td>
+	      <td class="text3 "></td>
+	      <td class="text1 "></td>
+	    </tr>
+	  </table>
+	  </br>
+	  <table>
+	    <tr>
+	      <td class=text5><input type="button" class="button7" value="Cancel" onclick=hideCustomer(); /></td>
+	      <td class=text4><input type="submit" class="button6" value="Save"></td>
+	    </tr>
+	  </table>
+	  </div>
+	</form>
+</div>
+
+
+
+<div class="contactdiv" id="RateContact">
+	<form class="form" action="post" id="unitType">
+	  <div class="SettingTitle3">
+	    <p class="color">I N V O I C E</p> 
+	  </div>
+	  <div class="padding1">
+	  <table>
+	    <tr>
+ 			<td class="text1 textField">Line Haul</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Waiting Charge</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Extra</td>
+	    </tr>
+	    <tr>
+            <td class="text1"><input name=lHaul[] type="text" class="text1" placeholder="Line Haul"></td>
+            <td class="text3"></td>
+            <td class="text1"><input name=WCharge[] step='0.01'  placeholder='Waiting Charge' class="number" step=0.01 placeholder="Waiting Charge"></td>
+            <td class="text3"></td>
+            <td class="text1"><input name=extra[] type="number" step='0.01' class="text1" placeholder="Extra"></td>
+            
+	    </tr>
+	  </table>
+	  <table>
+	      <tr>
+ 			<td class="text1 textField">Discount</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Taxes</td>
+            <td class="text3 textField"></td>
+            <td class="text1 textField">Total</td>
+	    </tr>
+	    <tr>
+            <td class="text1"><input name=discount[] type="number" step='0.01' class="text1" placeholder="Discounts"></td>
+            <td class="text3"></td>
+            <td class="text1"><input name=taxes[] type="number" step='0.01' class="text1" placeholder="Taxes"></td>
+            <td class="text3"></td>
+            <td class="text1"><input name=total[] type="number" step='0.01' class="text1" placeholder="Extra"></td>
+            
+	    </tr>
+	  </table>
+	  </br>
+	  <table>
+	    <tr>
+	      <td class=text5><input type="button" class="button7" value="Cancel" onclick=hideRate(); /></td>
+	      <td class=text4><input type="submit" class="button6" value="Save"></td>
+	    </tr>
+	  </table>
+	  </div>
+	</form>
+</div>
+
+
+
 
 <script>
 var rowNum = 0;

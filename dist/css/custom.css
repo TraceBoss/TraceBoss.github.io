@@ -66,6 +66,16 @@
 	font-size: 52.5px;
 	color: rgb(255,95,87);
 	font-weight: 300;
+	margin-top: 2%;
+    margin-left: 2%;
+}
+.SettingTitle3 {
+	min-width: 1500px;
+	font-size: 52.5px;
+	color: rgb(255,95,87);
+	font-weight: 300;
+	margin-top: 2%;
+    margin-left: 2%;
 }
 .color{
 	font-size: 52.5px;
@@ -384,6 +394,9 @@ input:focus {outline:none;}
 .green {
 	color: rgb(108,189,125);
 }
+.red {
+	color: rgb(255,95,87);
+}
 td.textmax {
 	padding-left: 125px;
 	text-align: left;
@@ -447,15 +460,19 @@ td.createButton{
 }
 td.texttd4{
 	width: 32%;
+	max-width: 32%;
 }
 td.texttd5{
 	width: 2%;
+	max-width: 2%;
 }
 td.texttd6{
 	width: 15%;
+	max-width: 15%;
 }
 td.texttd7{
 	width: 66%;
+	max-width: 66%;
 }
 .table1{
 	width: 100%;
@@ -475,6 +492,11 @@ select {
   	background: transparent  ;
   	overflow: hidden;
 
+}
+select.index option{
+	background-color: rgb(209,211,212);
+	border:1px solid rgb(65,64,66);
+	color:black;
 }
 select.txt1 {
 	width:100%;
@@ -496,8 +518,8 @@ select:focus {outline:none;}
 	min-width: 70%;
 	display: none;
 	background-color: rgb(209,211,212);
-	border: 2px solid rgb(157,159,162);
-	border-radius:6px;
+	border: 2.5px solid rgb(157,159,162);
+	border-radius:15px;
 }
 
 .driverdiv{
@@ -515,4 +537,63 @@ select:focus {outline:none;}
 
 .padding1{
 	padding: 20px;
+}
+input.text2{
+	width: 90%;
+	height: 90px;
+	border:1px solid rgb(65,64,66);
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	font-size: 40px;
+	padding-left: 10px;
+	border-right: none;
+	max-height: 90px;
+}
+button.text2{
+	width: 10%;
+	height:100%;
+	-webkit-appearance: none;
+	outline: none;
+	border: 0;
+		
+}
+span.white{
+	color: white;
+	background-color: ;
+	background-color: ;
+
+}
+input {
+	overflow: hidden;
+}
+.addne {
+	width:10%;
+	height: 90px;
+	position: relative;
+	top: -7.75px;
+	padding:none;
+	border: 1px solid rgb(65,64,66);
+	border-left: none;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: rgb(108,189,125);
+}
+.marginCreate{
+	margin-top: 10px;
+}
+.addne {
+	width:10%;
+	height: 90px;
+	position: relative;
+	top: -7.75px;
+	padding:none;
+	border: 1px solid rgb(65,64,66);
+	border-left: none;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	background-color: rgb(108,189,125);
+}
+button.addne2 {
+	background-color: transparent;
+	border:none;
 }
