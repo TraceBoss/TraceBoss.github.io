@@ -155,54 +155,23 @@
           <td>View </td>
           <td>Action</td>
         </tr>
-        <tr>
-          <td>D2345</td>
-          <td>Apotex</td>
-          <td>Vaughan</td>
-          <td>3229 Respond road, Mississauga </td>
-          <td>View </td>
-          <td>action</td>
-        </tr>
-        <tr>
-          <td>D2345</td>
-          <td>Apotex</td>
-          <td>Vaughan</td>
-          <td>3229 Respond road, Mississauga </td>
-          <td>View </td>
-          <td>action</td>
-        </tr>
-        <tr>
-          <td>D2345</td>
-          <td>Apotex</td>
-          <td>Vaughan</td>
-          <td>3229 Respond road, Mississauga </td>
-          <td>View </td>
-          <td>action</td>
-        </tr>
-        <tr>
-          <td>D2345</td>
-          <td>Apotex</td>
-          <td>Vaughan</td>
-          <td>3229 Respond road, Mississauga </td>
-          <td>View </td>
-          <td>action</td>
-        </tr>
-        <tr>
-          <td>D2345</td>
-          <td>Apotex</td>
-          <td>Vaughan</td>
-          <td>3229 Respond road, Mississauga </td>
-          <td>View </td>
-          <td>action</td>
-        </tr>
-        <tr class="settingTableLast">
-          <td>D2345</td>
-          <td>Apotex</td>
-          <td>Vaughan</td>
-          <td>3229 Respond road, Mississauga </td>
-          <td>View </td>
-          <td>action</td>
-        </tr>
+        <?php
+  $conn = mysql_connect('localhost','root','');
+  mysql_select_db('TraceBoss',$conn);
+  $sql = "SELECT * FROM `CustomBroker` WHERE 1";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+          echo "  <td>" . $row["BID"] . "</td><td> " . $row["BrokerName"] . "</td>
+          <td>" . $row["Address"] . "</td><td>VIEW</td>
+          <td><button id='". $row["BID"] ."E' class=addne2 type=button ><span class='glyphicon glyphicon glyphicon-edit green'></span></button><button id='". $row["BID"] ."R' class=addne2 type=button ><span class='glyphicon glyphicon glyphicon-trash red'></span></button></td>";
+
+      }
+  } else {
+      echo "0 results";
+  }
+?>
       </table>
     </div>
   </div>
