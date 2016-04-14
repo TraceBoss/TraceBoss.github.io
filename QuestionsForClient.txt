@@ -1,11 +1,28 @@
 What is the drop down list settings for Same as Location?
+Yes or No
 
 What is the drop down list option need an appointment?
+Yes or No
 
 What is the status drop down options?
 
+
 What is the options for unit type?
+Trailer
+Tractor
 
 What is the drop down rate questions?
 
+
 What is tax rates?
+
+
+What do you exactally want from your company
+
+
+In Customer what do you want in PO?
+Delete
+
+Add comment in empty space
+
+New name Transpot
